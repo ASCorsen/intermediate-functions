@@ -142,15 +142,32 @@ console.log(averageGradeRound(grades))
 // * Hoe zorgt ik ervoor dat wanneer ik een cijfer tegenkom die aan de conditie voldoet, ik dit ergens kan opslaan?
 // Log het antwoord in de terminal.
 console.log("/* 3a: Script schrijven hoogste cijfer!  */")
+// function highestGrade(input) {
+//     for (let i = 0; i < input.length; i++) {
+//         let topStudent = Math.max(...input)
+//         return topStudent
+//     }
+// }
 function highestGrade(input) {
-    for (let i = 0; i < input.length; i++) {
-        let topStudent = Math.max(...input)
-        return topStudent
-    }
+    return Math.max(...input) //maar dit mag niet kwam ik later achter!
 }
 
 console.log(highestGrade(grades))
 console.log(highestGrade([8, 9, 4, 6, 10]))
+
+console.log("/* nu zonder math functie  */")
+function highestGradeMethode(input) {
+    let largestNumber = 0
+    for (let i = 0; i < input.length; i++) {
+        if (input[i] > largestNumber) {
+            largestNumber = input[i];
+        }
+    }
+    return largestNumber
+}
+
+console.log(highestGradeMethode(grades))
+console.log(highestGradeMethode([8, 9, 4, 6, 10]))
 
 // ---- Verwachte uitkomst: 9
 
